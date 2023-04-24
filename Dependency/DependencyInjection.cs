@@ -37,7 +37,7 @@ namespace CleanArch.Dependency
             services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(AppDomain.CurrentDomain.Load("CleanArchMvc.Application")));
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(AppDomain.CurrentDomain.Load("AppService")));
 
             return services;
         }
